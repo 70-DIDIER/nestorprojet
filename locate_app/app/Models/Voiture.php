@@ -16,4 +16,13 @@ class Voiture extends Model
 {
     return $this->hasMany(Reservation::class);
 }
+
+public function estDisponible($debut = null, $fin = null)
+{
+    return $this->disponible && !$this->reservations()
+        ->where(function($query) use ($debut, $fin) {
+            $query->whereBetween('date_debut', [$debut, $fin])
+                  ->orWhereBetween('date_fin', [$debut, $fin]);
+        })->exists();
+}
 }

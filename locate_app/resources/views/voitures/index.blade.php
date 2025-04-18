@@ -47,14 +47,15 @@
                         <tbody>
                             @foreach($voitures as $voiture)
                             <tr>
-                                <td style="width: 120px">
+                                <td>
                                     @if($voiture->photo)
-                                        <img src="{{ asset('storage/' . $voiture->photo) }}" 
-                                             alt="{{ $voiture->marque }}" 
-                                             class="img-thumbnail" style="width: 100px; height: auto;">
+                                        <div style="width: 100px; height: 75px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                                            <img src="{{ asset('storage/'.$voiture->photo) }}" 
+                                                 alt="{{ $voiture->marque }}"
+                                                 style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                                        </div>
                                     @else
-                                        <div class="bg-light d-flex align-items-center justify-content-center" 
-                                             style="width: 100px; height: 60px;">
+                                        <div style="width: 100px; height: 75px; background: #f8f9fa; display: flex; align-items: center; justify-content: center;">
                                             <i class="fas fa-car text-muted"></i>
                                         </div>
                                     @endif
