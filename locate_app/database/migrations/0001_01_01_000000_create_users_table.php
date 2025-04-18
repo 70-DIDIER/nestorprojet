@@ -11,8 +11,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             // Champs par défaut (nécessaires pour Laravel)
             $table->id();
-            $table->string('name'); // Utilisé comme "nom de famille"
-            $table->string('prenom'); // Ajouté pour le prénom
+            $table->string('name'); // Utilisé comme "nom de famille"// Ajouté pour le prénom
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -23,7 +22,6 @@ return new class extends Migration
             $table->string('telephone')->nullable();
             $table->text('adresse')->nullable();
             $table->string('numero_permis')->nullable();
-            $table->date('date_naissance')->nullable();
         });
 
         // Gardez les autres tables (password_reset_tokens, sessions) inchangées
