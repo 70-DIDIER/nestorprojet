@@ -13,7 +13,14 @@ class Reservation extends Model
         'user_id', 'voiture_id', 'date_debut', 'date_fin',
         'prix_total', 'statut'
     ];
+    protected $casts = [
+        'date_debut' => 'datetime:Y-m-d',
+        'date_fin' => 'datetime:Y-m-d',
+    ];
 
+    public const STATUT_EN_ATTENTE = 'en_attente';
+public const STATUT_APPROUVEE = 'approuvee';
+public const STATUT_REJETEE = 'rejetee';
     public function user()
 {
     return $this->belongsTo(User::class);

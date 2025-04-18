@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Dans resources/css/app.css */
+.btn-action {
+    min-width: 100px;  /* Largeur minimale */
+    transition: all 0.3s;  /* Animation */
+}
+
+.btn-action:hover {
+    transform: scale(1.05);  /* Légère augmentation au survol */
+}

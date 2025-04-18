@@ -23,9 +23,12 @@ Route::get('/voitures/{voiture}/edit', [VoitureController::class, 'edit'])->name
 Route::put('/voitures/{voiture}', [VoitureController::class, 'update'])->name('voitures.update');
 // Suppression d'une voiture
 Route::delete('/voitures/{voiture}', [VoitureController::class, 'destroy'])->name('voitures.destroy');
-
+Route::post('/reservations/{reservation}/approve', [ReservationController::class, 'approve'])->name('reservations.approve');
+Route::post('/reservations/{reservation}/reject', [ReservationController::class, 'reject'])->name('reservations.reject');
 Route::get('/voitures/{voiture}/reservations/create', [ReservationController::class, 'create'])
     ->name('reservations.create');
+    Route::get('/reservations', [ReservationController::class, 'index'])
+    ->name('reservations.index');
     Route::post('/voitures/{voiture}/reservations/', [ReservationController::class, 'store'])
     ->name('reservations.store');
     // ->middleware('auth'); // Protection par authentification
