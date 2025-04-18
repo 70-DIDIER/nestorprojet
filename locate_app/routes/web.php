@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VoitureController;
 use App\Http\controllers\ReservationController;
+use App\Mail\ReservationApprovedMail;
 
 Route::get('/', function () {
     return view('welcome');
@@ -31,6 +32,11 @@ Route::get('/voitures/{voiture}/reservations/create', [ReservationController::cl
     ->name('reservations.index');
     Route::post('/voitures/{voiture}/reservations/', [ReservationController::class, 'store'])
     ->name('reservations.store');
+    Route::get('/test-email', function() {
+        $reservation = App\Models\Reservation::first();
+        Mail::to('test@example.com')->send(new App\Mail\ReservationApprovedMail($reservation));
+        return 'Email envoyé';
+    });
     // ->middleware('auth'); // Protection par authentification
 Route::get('/dashboard', function () {
     return view('dashboard');
