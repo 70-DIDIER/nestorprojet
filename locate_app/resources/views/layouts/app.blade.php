@@ -32,7 +32,7 @@
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="position-relative px-lg-5" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
-                <a href="{{ route('') }}" class="navbar-brand">
+                <a href="" class="navbar-brand">
                     <h1 class="text-uppercase text-primary mb-1">Royal Cars</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -41,17 +41,17 @@
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
                         <a href="" class="nav-item nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Accueil</a>
-                        <a href="{{ route('about') }}" class="nav-item nav-link {{ request()->routeIs('about') ? 'active' : '' }}">À propos</a>
-                        <a href="{{ route('services') }}" class="nav-item nav-link {{ request()->routeIs('services') ? 'active' : '' }}">Services</a>
+                        <a href="" class="nav-item nav-link {{ request()->routeIs('about') ? 'active' : '' }}">À propos</a>
+                        <a href="" class="nav-item nav-link {{ request()->routeIs('services') ? 'active' : '' }}">Services</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Véhicules</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="{{ route('cars.index') }}" class="dropdown-item">Nos véhicules</a>
-                                <a href="{{ route('cars.show', 1) }}" class="dropdown-item">Détails</a>
-                                <a href="{{ route('booking.create') }}" class="dropdown-item">Réservation</a>
+                                <a href="" class="dropdown-item">Nos véhicules</a>
+                                <a href="" class="dropdown-item">Détails</a>
+                                <a href="" class="dropdown-item">Réservation</a>
                             </div>
                         </div>
-                        <a href="{{ route('contact') }}" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
+                        <a href="" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
                     </div>
                 </div>
             </nav>

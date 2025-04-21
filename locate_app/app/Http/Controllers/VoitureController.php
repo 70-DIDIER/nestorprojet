@@ -42,7 +42,7 @@ public function store(Request $request)
         'annee' => 'required|integer|min:2000|max:'.(date('Y')+1),
         'prix_journalier' => 'required|numeric|min:10',
         'carburant' => 'required|in:Essence,Diesel,Electrique,Hybride',
-        'photo' => 'required|image|mimes:jpeg,png|max:2048',
+        'photo' => 'required|image|mimes:jpeg,png|max:5000',
         'disponible' => 'boolean' // 'sometimes' retiré car toujours présent
     ]);
 
