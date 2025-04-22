@@ -30,7 +30,7 @@
 <body>
     <!-- Navbar Start -->
     <div class="container-fluid position-relative nav-bar p-0">
-        <div class="position-relative px-lg-5" style="z-index: 9;">
+        <div class="position-relative" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
                 <a href="" class="navbar-brand">
                     <h1 class="text-uppercase text-primary mb-1">Royal Cars</h1>
